@@ -8,3 +8,5 @@ config/zsh/.zsh_sessions
 config/zsh/.p10k.zsh.zwc
 
 config/kitty/kitty.local.conf
+
+config/nvim/plugin/packer_compiled.lua
