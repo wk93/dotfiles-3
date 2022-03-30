@@ -1,4 +1,12 @@
+local g = vim.g
 local opt = vim.opt
+local map = vim.api.nvim_set_keymap
+
+-- space is my leader
+map('n', '<space>', '<nop>', {})
+map('v', '<space>', '<nop>', {})
+g.mapleader = ' '
+g.maplocalleader = '\\'
 
 -- tab size
 opt.expandtab = true
@@ -24,6 +32,6 @@ opt.listchars = {
   precedes = '«', -- more text on left side
 }
 
-
 -- connect with system clipboard
 opt.clipboard = {'unnamed', 'unnamedplus'}
+
