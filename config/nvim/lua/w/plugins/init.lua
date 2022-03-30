@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     use {
       'JoosepAlviste/palenightfall.nvim',
       config = function()
-        require 'setup.palenightfall'
+        require 'w.plugins.palenightfall'
       end,
     }
 
@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
       -- Fuzzy finder
       'nvim-telescope/telescope.nvim',
       config = function()
-        require 'setup.telescope'
+        require 'w.plugins.telescope'
       end,
       requires = {
         'nvim-lua/plenary.nvim', -- Useful Lua utilities
