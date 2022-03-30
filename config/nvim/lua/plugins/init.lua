@@ -16,8 +16,25 @@ return require('packer').startup(function(use)
     use {
       'JoosepAlviste/palenightfall.nvim',
       config = function()
-        require 'palenightfall'
+        require 'setup.palenightfall'
       end,
+    }
+
+  -- Navigation
+    use {
+      -- Fuzzy finder
+      'nvim-telescope/telescope.nvim',
+      config = function()
+        require 'setup.telescope'
+      end,
+      requires = {
+        'nvim-lua/plenary.nvim', -- Useful Lua utilities
+        'nvim-lua/popup.nvim',
+
+        -- FZF sorter for Telescope
+        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+        'nvim-telescope/telescope-ui-select.nvim',
+      },
     }
 
     -- Automatically set up your configuration after cloning packer.nvim
@@ -26,3 +43,4 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
