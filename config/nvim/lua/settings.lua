@@ -23,3 +23,7 @@ opt.listchars = {
   extends = '»', -- more text on right side
   precedes = '«', -- more text on left side
 }
+
+
+-- connect with system clipboard
+opt.clipboard = {'unnamed', 'unnamedplus'}
