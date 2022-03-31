@@ -7,6 +7,7 @@ fi
 
 alias cat='bat'
 alias ls='exa -lah --time-style long-iso --octal-permissions --no-permissions --group-directories-first'
+alias lg='lazygit'
 
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
