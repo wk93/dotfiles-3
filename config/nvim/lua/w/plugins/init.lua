@@ -46,6 +46,23 @@ return require('packer').startup(function(use)
     end,
   }
 
+  -- lsp
+  use {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require 'w.plugins.lsp.tsserver'
+    end,
+    requires = {
+      {
+        'jose-elias-alvarez/null-ls.nvim',
+        config = function()
+          require 'w.plugins.lsp.null-ls'
+        end,
+      },
+      'jose-elias-alvarez/nvim-lsp-ts-utils'
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
