@@ -2,7 +2,11 @@ local null_ls = require('null-ls')
 
 null_ls.setup {
   sources = {
-    null_ls.builtins.formatting.deno_fmt,
+ null_ls.builtins.formatting.deno_fmt.with {
+      extra_args = { 
+        '--options-single-quote'
+      }
+    },
     null_ls.builtins.formatting.prettier.with {
       disabled_filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
     }, -- use deno instead
