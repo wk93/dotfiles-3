@@ -35,3 +35,15 @@ opt.listchars = {
 -- connect with system clipboard
 opt.clipboard = {'unnamed', 'unnamedplus'}
 
+-- disable arrows
+map('n', '<left>', ':echoe "Use h"<CR>', {})
+map('i', '<left>', '<ESC>:echoe "Use h"<CR>', {})
+
+map('n', '<right>', ':echoe "Use l"<CR>', {})
+map('i', '<right>', '<ESC>:echoe "Use l"<CR>', {})
+
+map('n', '<down>', ':echoe "Use j"<CR>', {})
+map('i', '<down>', '<ESC>:echoe "Use j"<CR>', {})
+
+map('n', '<up>', ':echoe "Use k"<CR>', {})
+map('i', '<up>', '<ESC>:echoe "Use k"<CR>', {})
