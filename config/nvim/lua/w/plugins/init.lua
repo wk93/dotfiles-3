@@ -66,7 +66,20 @@ return require('packer').startup(function(use)
           require 'w.plugins.lsp.null-ls'
         end,
       },
-      'jose-elias-alvarez/nvim-lsp-ts-utils'
+      'jose-elias-alvarez/nvim-lsp-ts-utils',
+      {
+        'hrsh7th/nvim-cmp',
+        requires = {
+          'hrsh7th/cmp-nvim-lsp',
+          'hrsh7th/cmp-buffer',
+          'hrsh7th/cmp-path',
+          'hrsh7th/cmp-vsnip',
+          'petertriho/cmp-git',
+        },
+        config = function()
+          require 'w.plugins.cmp'
+        end,
+      }
     }
   }
 
