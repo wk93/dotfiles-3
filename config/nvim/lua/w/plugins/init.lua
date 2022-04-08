@@ -80,6 +80,12 @@ return require('packer').startup(function(use)
         config = function()
           require 'w.plugins.cmp'
         end,
+      },
+      {
+        'tami5/lspsaga.nvim',
+        config = function()
+          require 'w.plugins.lsp.saga'
+        end,
       }
     }
   }
