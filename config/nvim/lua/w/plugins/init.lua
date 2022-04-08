@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
     'neovim/nvim-lspconfig',
     config = function()
       require 'w.plugins.lsp.tsserver'
+      require 'w.plugins.lsp.sumenko_lua'
     end,
     requires = {
       {
