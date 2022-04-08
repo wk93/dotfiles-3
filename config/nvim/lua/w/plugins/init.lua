@@ -20,6 +20,13 @@ return require('packer').startup(function(use)
       end,
   }
 
+  -- Treesitter - better highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require 'w.plugins.treesitter'
+    end,
+  }
   -- Navigation
   use {
     -- Fuzzy finder
